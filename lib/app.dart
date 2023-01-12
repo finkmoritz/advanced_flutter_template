@@ -1,5 +1,5 @@
-import 'package:advanced_flutter_template/providers/localization_provider.dart';
-import 'package:advanced_flutter_template/providers/theme_provider.dart';
+import 'package:advanced_flutter_template/providers/localization/localization_provider.dart';
+import 'package:advanced_flutter_template/providers/theme/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -13,12 +13,13 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var themeProvider = context.watch<ThemeProvider>();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Advanced Flutter Template',
-      themeMode: context.watch<ThemeProvider>().themeMode,
-      theme: ThemeProvider.lightTheme,
-      darkTheme: ThemeProvider.darkTheme,
+      themeMode: themeProvider.themeMode,
+      theme: themeProvider.lightTheme,
+      darkTheme: themeProvider.darkTheme,
       locale: context.watch<LocalizationProvider>().locale,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,

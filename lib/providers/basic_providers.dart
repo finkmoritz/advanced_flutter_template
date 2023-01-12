@@ -1,7 +1,10 @@
-import 'package:advanced_flutter_template/providers/localization_provider.dart';
-import 'package:advanced_flutter_template/providers/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import 'localization/localization_provider.dart';
+import 'localization/localization_provider_impl.dart';
+import 'theme/theme_provider.dart';
+import 'theme/theme_provider_impl.dart';
 
 class BasicProviders extends StatelessWidget {
   final Widget child;
@@ -15,11 +18,11 @@ class BasicProviders extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(
-          create: (_) => LocalizationProvider(),
+        ChangeNotifierProvider<LocalizationProvider>(
+          create: (_) => LocalizationProviderImpl(),
         ),
-        ChangeNotifierProvider(
-          create: (_) => ThemeProvider(),
+        ChangeNotifierProvider<ThemeProvider>(
+          create: (_) => ThemeProviderImpl(),
         ),
       ],
       child: child,

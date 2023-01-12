@@ -1,40 +1,46 @@
 import 'package:flex_color_scheme/flex_color_scheme.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class ThemeProvider
-    with ChangeNotifier, DiagnosticableTreeMixin
-    implements Listenable {
+import 'theme_provider.dart';
+
+class ThemeProviderImpl
+    with ChangeNotifier
+    implements ThemeProvider {
   ThemeMode _themeMode = ThemeMode.dark;
 
+  @override
   ThemeMode get themeMode => _themeMode;
 
+  @override
   set themeMode(ThemeMode value) {
     if (_themeMode != value) {
       _themeMode = value;
-      _savePreferences();
+      savePreferences();
       notifyListeners();
     }
   }
 
-  ThemeProvider() {
-    _loadPreferences();
+  ThemeProviderImpl() {
+    loadPreferences();
   }
 
+  @override
   toggleThemeMode() {
     themeMode =
         _themeMode == ThemeMode.light ? ThemeMode.dark : ThemeMode.light;
   }
 
-  Future<void> _loadPreferences() async {
+  @protected
+  Future<void> loadPreferences() async {
     var prefs = await SharedPreferences.getInstance();
     var isLightMode = prefs.getBool('theme_mode') ?? false;
     themeMode = isLightMode ? ThemeMode.light : ThemeMode.dark;
   }
 
-  Future<void> _savePreferences() async {
+  @protected
+  Future<void> savePreferences() async {
     var prefs = await SharedPreferences.getInstance();
     await prefs.setBool(
       'theme_mode',
@@ -42,7 +48,8 @@ class ThemeProvider
     );
   }
 
-  static ThemeData get lightTheme {
+  @override
+  ThemeData get lightTheme {
     var baseTheme = FlexThemeData.light(
       scheme: FlexScheme.indigo,
       useMaterial3: true,
@@ -53,7 +60,8 @@ class ThemeProvider
     );
   }
 
-  static ThemeData get darkTheme {
+  @override
+  ThemeData get darkTheme {
     var baseTheme = FlexThemeData.dark(
       scheme: FlexScheme.indigo,
       useMaterial3: true,

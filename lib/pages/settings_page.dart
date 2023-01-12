@@ -1,9 +1,9 @@
-import 'package:advanced_flutter_template/providers/theme_provider.dart';
+import 'package:advanced_flutter_template/providers/theme/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../l10n/auto_import_workaround.dart';
-import '../providers/localization_provider.dart';
+import '../providers/localization/localization_provider.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({

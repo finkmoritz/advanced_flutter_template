@@ -3,24 +3,29 @@ import 'dart:ui';
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class LocalizationProvider
-    with ChangeNotifier, DiagnosticableTreeMixin
-    implements Listenable {
+import 'localization_provider.dart';
+
+class LocalizationProviderImpl
+    with ChangeNotifier
+    implements LocalizationProvider {
   Locale? _locale;
 
+  @override
   Locale? get locale => _locale;
 
+  @override
   set locale(Locale? value) {
     _locale = value;
-    _savePreferences();
+    savePreferences();
     notifyListeners();
   }
 
-  LocalizationProvider() {
-    _loadPreferences();
+  LocalizationProviderImpl() {
+    loadPreferences();
   }
 
-  Future<void> _loadPreferences() async {
+  @protected
+  Future<void> loadPreferences() async {
     var prefs = await SharedPreferences.getInstance();
     var languageCode = prefs.getString('locale.languageCode');
     locale = languageCode == null || languageCode.isEmpty
@@ -28,7 +33,8 @@ class LocalizationProvider
         : Locale(languageCode);
   }
 
-  Future<void> _savePreferences() async {
+  @protected
+  Future<void> savePreferences() async {
     var prefs = await SharedPreferences.getInstance();
     await prefs.setString(
       'locale.languageCode',
