@@ -1,4 +1,8 @@
 {
   "appTitle": "Advanced Flutter Template",
-  "helloWorld": "Hallo Welt!"
+  "darkTheme": "Dunkler Modus",
+  "helloWorld": "Hallo Welt!",
+  "language": "Sprache",
+  "settings": "Einstellungen",
+  "system": "System"
 }
