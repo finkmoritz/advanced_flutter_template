@@ -8,7 +8,7 @@ A new Flutter project with advanced setup:
 - Launcher and splash icon
 - Test case with Provider mocks
 
-![Screenshot](https://github.com/finkmoritz/advanced_flutter_template/blob/master/screenshot.png)
+<img src="https://github.com/finkmoritz/advanced_flutter_template/blob/master/screenshot.png" alt="Screenshot" width="200"/>
 
 ## Getting Started
 
