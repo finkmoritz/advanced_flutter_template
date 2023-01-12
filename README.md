@@ -1,4 +1,4 @@
-# advanced_flutter_template
+# Advanced Flutter Template
 
 A new Flutter project with advanced setup:
 
@@ -23,10 +23,18 @@ Execute ```flutter test test``` to run the test cases.
 
 ## Customization
 
+### Package Name
+Change the package name of this app by executing 
+```
+flutter pub run change_app_package_name:main com.new.package.name
+```
+(uses [change_app_package_name](https://pub.dev/packages/change_app_package_name))
+
 ### Theme
 If you want to change the app's theme, have a look at the
 [ThemeProviderImpl](lib/providers/theme/theme_provider_impl.dart).
 Here you can change color schemes and fonts according to your needs.
+(see also [flex_color_scheme](https://pub.dev/packages/flex_color_scheme))
 
 ### Custom Icon
 You can customize launcher and splash icons by
