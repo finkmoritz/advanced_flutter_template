@@ -1,5 +1,5 @@
 name: advanced_flutter_template
-description: A new Flutter project.
+description: A new Flutter project with advanced setup.
 publish_to: 'none'
 version: 1.0.0+1
 
@@ -24,8 +24,23 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+  flutter_launcher_icons: ^0.11.0
   flutter_lints: ^2.0.0
+  flutter_native_splash: ^2.2.16
 
 flutter:
+  assets:
+    - assets/
   generate: true
   uses-material-design: true
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon.png"
+  adaptive_icon_background: "#000000"
+  remove_alpha_ios: true
+
+flutter_native_splash:
+  color: "#000000"
+  image: assets/icon.png
