@@ -1,5 +1,6 @@
 {
   "appTitle": "Advanced Flutter Template",
+  "clickMe": "Drück mich",
   "darkTheme": "Dunkler Modus",
   "helloWorld": "Hallo Welt!",
   "language": "Sprache",
