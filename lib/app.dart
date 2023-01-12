@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'l10n/auto_import_workaround.dart';
 import 'pages/home_page.dart';
 
 class App extends StatelessWidget {
@@ -17,6 +18,8 @@ class App extends StatelessWidget {
       darkTheme: ThemeData.dark(
         useMaterial3: true,
       ),
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
       home: const HomePage(),
     );
   }
