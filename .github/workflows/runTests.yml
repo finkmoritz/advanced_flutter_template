@@ -1,0 +1,17 @@
+name: Run tests
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build_android:
+    name: Run tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: subosito/flutter-action@v2.8.0
+        with:
+          flutter-version: '3.3.10'
+      - run: flutter pub get
+      - run: flutter gen-l10n
+      - run: flutter test
