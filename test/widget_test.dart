@@ -9,6 +9,6 @@ void main() {
       child: App(),
     ));
 
-    expect(find.text('Hello World!'), findsOneWidget);
+    expect(find.text('Click me'), findsOneWidget);
   });
 }
