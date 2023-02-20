@@ -1,10 +1,10 @@
 import 'package:advanced_flutter_template/providers/localization/localization_provider.dart';
 import 'package:advanced_flutter_template/providers/theme/theme_provider.dart';
+import 'package:advanced_flutter_template/router/my_router_config.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'l10n/auto_import_workaround.dart';
-import 'pages/home_page.dart';
 
 class App extends StatelessWidget {
   const App({
@@ -14,7 +14,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var themeProvider = context.watch<ThemeProvider>();
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Advanced Flutter Template',
       themeMode: themeProvider.themeMode,
@@ -23,7 +23,7 @@ class App extends StatelessWidget {
       locale: context.watch<LocalizationProvider>().locale,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const HomePage(),
+      routerConfig: myRouterConfig,
     );
   }
 }

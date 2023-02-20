@@ -2,7 +2,8 @@
 
 A new Flutter project with advanced setup:
 
-- State management (Provider)
+- State management (provider)
+- Routing (go_router)
 - Theming (Flex color scheme, Google fonts, Font Awesome icons)
 - Internationalization
 - Launcher and splash icon
@@ -31,6 +32,11 @@ Change the package name of this app by executing
 flutter pub run change_app_package_name:main com.new.package.name
 ```
 (uses [change_app_package_name](https://pub.dev/packages/change_app_package_name))
+
+### Routing
+Add and remove routes in [my_router_config](lib/router/my_router_config.dart) in order to 
+implement your custom navigation logic 
+(see also [go_router](https://pub.dev/packages/go_router)).
 
 ### Theme
 If you want to change the app's theme, have a look at the

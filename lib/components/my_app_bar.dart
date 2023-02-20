@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 
 import '../l10n/auto_import_workaround.dart';
-import '../pages/settings_page.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MyAppBar({
@@ -20,12 +20,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         IconButton(
           icon: const FaIcon(FontAwesomeIcons.gear),
-          onPressed: () => Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (_) => const SettingsPage(),
-            ),
-          ),
+          onPressed: () => context.go('/settings'),
         ),
       ],
     );

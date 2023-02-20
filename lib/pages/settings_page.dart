@@ -1,5 +1,7 @@
 import 'package:advanced_flutter_template/providers/theme/theme_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
 import '../l10n/auto_import_workaround.dart';
@@ -17,6 +19,10 @@ class SettingsPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: const FaIcon(FontAwesomeIcons.chevronLeft),
+          onPressed: () => context.go('/'),
+        ),
         title: Text(AppLocalizations.of(context)!.settings),
       ),
       body: ListView(
