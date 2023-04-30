@@ -1,8 +1,9 @@
 {
-  "appTitle": "Conway Multiplayer",
+  "appTitle": "Advanced Flutter Template",
+  "clickMe": "Drück mich",
   "darkTheme": "Dunkler Modus",
+  "helloWorld": "Hallo Welt!",
   "language": "Sprache",
-  "quickStart": "Schnellstart",
   "settings": "Einstellungen",
   "system": "System"
 }

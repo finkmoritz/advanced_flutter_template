@@ -51,24 +51,24 @@ class ThemeProviderImpl
   @override
   ThemeData get lightTheme {
     var baseTheme = FlexThemeData.light(
-      scheme: FlexScheme.gold,
+      scheme: FlexScheme.indigo,
       useMaterial3: true,
       useMaterial3ErrorColors: true,
     );
     return baseTheme.copyWith(
-      textTheme: GoogleFonts.sigmarOneTextTheme(baseTheme.textTheme),
+      textTheme: GoogleFonts.robotoTextTheme(baseTheme.textTheme),
     );
   }
 
   @override
   ThemeData get darkTheme {
     var baseTheme = FlexThemeData.dark(
-      scheme: FlexScheme.gold,
+      scheme: FlexScheme.indigo,
       useMaterial3: true,
       useMaterial3ErrorColors: true,
     );
     return baseTheme.copyWith(
-      textTheme: GoogleFonts.sigmarOneTextTheme(baseTheme.textTheme),
+      textTheme: GoogleFonts.robotoTextTheme(baseTheme.textTheme),
     );
   }
 }

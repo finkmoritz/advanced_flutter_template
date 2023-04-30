@@ -14,9 +14,11 @@ class HomePage extends StatelessWidget {
       appBar: const MyAppBar(),
       body: Center(
         child: ElevatedButton.icon(
-          icon: const FaIcon(FontAwesomeIcons.play),
-          label: Text(AppLocalizations.of(context)!.quickStart),
-          onPressed: () {},
+          icon: const FaIcon(FontAwesomeIcons.faceSmileWink),
+          label: Text(AppLocalizations.of(context)!.clickMe),
+          onPressed: () => ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            content: Text(AppLocalizations.of(context)!.helloWorld),
+          )),
         ),
       ),
     );
