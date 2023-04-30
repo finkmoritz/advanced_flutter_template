@@ -16,7 +16,7 @@ class App extends StatelessWidget {
     var themeProvider = context.watch<ThemeProvider>();
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      title: 'Advanced Flutter Template',
+      title: 'Conway Multiplayer',
       themeMode: themeProvider.themeMode,
       theme: themeProvider.lightTheme,
       darkTheme: themeProvider.darkTheme,

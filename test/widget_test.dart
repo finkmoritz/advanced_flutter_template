@@ -9,6 +9,6 @@ void main() {
       child: App(),
     ));
 
-    expect(find.text('Click me'), findsOneWidget);
+    expect(find.text('Quick Start'), findsOneWidget);
   });
 }

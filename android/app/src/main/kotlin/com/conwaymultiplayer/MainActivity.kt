@@ -1,4 +1,4 @@
-package com.example.advanced_flutter_template
+package com.conwaymultiplayer
 
 import io.flutter.embedding.android.FlutterActivity
 
