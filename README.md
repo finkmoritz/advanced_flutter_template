@@ -29,7 +29,7 @@ Execute ```flutter test test``` to run the test cases.
 ### Package Name
 Change the package name of this app by executing 
 ```
-flutter pub run change_app_package_name:main com.new.package.name
+dart run change_app_package_name:main com.new.package.name
 ```
 (uses [change_app_package_name](https://pub.dev/packages/change_app_package_name))
 
