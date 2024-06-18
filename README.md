@@ -47,8 +47,8 @@ Here you can change color schemes and fonts according to your needs.
 ### Custom Icon
 You can customize launcher and splash icons by
 1. Replacing [icon.png](assets/icon.png) with your custom image
-2. Executing ```flutter pub run flutter_launcher_icons``` (uses [flutter_launcher_icons](https://pub.dev/packages/flutter_launcher_icons))
-3. Executing ```flutter pub run flutter_native_splash:create``` (uses [flutter_native_splash](https://pub.dev/packages/flutter_native_splash))
+2. Executing ```dart run flutter_launcher_icons``` (uses [flutter_launcher_icons](https://pub.dev/packages/flutter_launcher_icons))
+3. Executing ```dart run flutter_native_splash:create``` (uses [flutter_native_splash](https://pub.dev/packages/flutter_native_splash))
 
 ### Internationalization
 In order to add a new language, just add a new file with translations to the

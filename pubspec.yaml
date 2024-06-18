@@ -36,12 +36,17 @@ flutter:
   generate: true
   uses-material-design: true
 
-flutter_icons:
+flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
   image_path: "assets/icon.png"
   adaptive_icon_background: "#ffffff"
   remove_alpha_ios: true
+  web:
+    generate: true
+    image_path: "assets/icon.png"
+    background_color: "#ffffff"
+    theme_color: "#ffffff"
 
 flutter_native_splash:
   color: "#ffffff"
