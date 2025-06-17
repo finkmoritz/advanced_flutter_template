@@ -5,8 +5,10 @@ abstract class ThemeProvider implements ChangeNotifier {
 
   set themeMode(ThemeMode value);
 
-  toggleThemeMode();
+  void toggleThemeMode();
 
   ThemeData get lightTheme;
   ThemeData get darkTheme;
+  ThemeData get highContrastLightTheme;
+  ThemeData get highContrastDarkTheme;
 }

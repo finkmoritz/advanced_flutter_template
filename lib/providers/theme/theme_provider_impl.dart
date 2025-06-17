@@ -51,20 +51,45 @@ class ThemeProviderImpl
   @override
   ThemeData get lightTheme {
     var baseTheme = FlexThemeData.light(
-      scheme: FlexScheme.indigo,
+      scheme: _scheme(),
     );
     return baseTheme.copyWith(
-      textTheme: GoogleFonts.robotoTextTheme(baseTheme.textTheme),
+      textTheme: _textTheme(baseTheme.textTheme),
     );
   }
 
   @override
   ThemeData get darkTheme {
     var baseTheme = FlexThemeData.dark(
-      scheme: FlexScheme.indigo,
+      scheme: _scheme(),
     );
     return baseTheme.copyWith(
-      textTheme: GoogleFonts.robotoTextTheme(baseTheme.textTheme),
+      textTheme: _textTheme(baseTheme.textTheme),
     );
   }
+
+  @override
+  ThemeData get highContrastLightTheme {
+    var baseTheme = FlexThemeData.light(
+      scheme: _highContrastScheme(),
+    );
+    return baseTheme.copyWith(
+      textTheme: _textTheme(baseTheme.textTheme),
+    );
+  }
+
+  @override
+  ThemeData get highContrastDarkTheme {
+    var baseTheme = FlexThemeData.dark(
+      scheme: _highContrastScheme(),
+    );
+    return baseTheme.copyWith(
+      textTheme: _textTheme(baseTheme.textTheme),
+    );
+  }
+
+  FlexScheme _scheme() => FlexScheme.material;
+  FlexScheme _highContrastScheme() => FlexScheme.materialHc;
+
+  TextTheme _textTheme(TextTheme textTheme) => GoogleFonts.robotoTextTheme(textTheme);
 }

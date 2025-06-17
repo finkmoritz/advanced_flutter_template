@@ -20,6 +20,8 @@ class App extends StatelessWidget {
       themeMode: themeProvider.themeMode,
       theme: themeProvider.lightTheme,
       darkTheme: themeProvider.darkTheme,
+      highContrastTheme: themeProvider.highContrastLightTheme,
+      highContrastDarkTheme: themeProvider.highContrastDarkTheme,
       locale: context.watch<LocalizationProvider>().locale,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
