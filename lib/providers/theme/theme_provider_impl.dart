@@ -52,8 +52,6 @@ class ThemeProviderImpl
   ThemeData get lightTheme {
     var baseTheme = FlexThemeData.light(
       scheme: FlexScheme.indigo,
-      useMaterial3: true,
-      useMaterial3ErrorColors: true,
     );
     return baseTheme.copyWith(
       textTheme: GoogleFonts.robotoTextTheme(baseTheme.textTheme),
@@ -64,8 +62,6 @@ class ThemeProviderImpl
   ThemeData get darkTheme {
     var baseTheme = FlexThemeData.dark(
       scheme: FlexScheme.indigo,
-      useMaterial3: true,
-      useMaterial3ErrorColors: true,
     );
     return baseTheme.copyWith(
       textTheme: GoogleFonts.robotoTextTheme(baseTheme.textTheme),

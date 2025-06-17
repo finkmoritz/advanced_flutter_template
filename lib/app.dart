@@ -4,7 +4,7 @@ import 'package:advanced_flutter_template/router/my_router_config.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'l10n/auto_import_workaround.dart';
+import 'l10n/app_localizations.dart';
 
 class App extends StatelessWidget {
   const App({

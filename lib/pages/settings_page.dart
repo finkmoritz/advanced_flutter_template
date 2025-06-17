@@ -4,13 +4,13 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
-import '../l10n/auto_import_workaround.dart';
+import '../l10n/app_localizations.dart';
 import '../providers/localization/localization_provider.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
